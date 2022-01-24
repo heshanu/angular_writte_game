@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-//const faker:any =require('faker');
-//import {faker} from '@types/faker';
 import { loremIpsum, LoremIpsum } from "lorem-ipsum";
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
-    max: 8,
-    min: 4
+    max: 1,
+    min: 1
   },
   wordsPerSentence: {
-    max: 16,
-    min: 4
+    max: 1,
+    min: 1
   }
 });
 
@@ -22,8 +20,15 @@ const lorem = new LoremIpsum({
 export class AppComponent {
   randomText:string=lorem.generateSentences(5);
   enteredText='';
-  onInput(value:string){
-    //console.log(value);
-    this.enteredText=value;
-  } 
+  /*
+  onInput(event:any){
+   //var p = (<HTMLInputElement>document.getElementById("i")).value;
+    this.enteredText=event.target.value;
+    console.log(this.enteredText);
+  }*/
+
+  onInput(event:any){
+    this.enteredText=event.target.value;
+    //console.log(this.enteredText);
+  }
 }

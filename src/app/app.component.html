@@ -4,15 +4,15 @@
             <h1 class="title has-text-centered">Typing Chalenge!</h1>  
             <p class="has-text-centered"><span *ngFor="let letter of randomText.split('')">{{letter}}</span></p>
             <div class="field">
-                <input type="text"  class="input" (click)="onInput=$any($event).target.value"><!--input -->
+                <!--<input type="text"  class="input" (input)="onInput=$any($event).target.value" id="i"><!--input -->
+                <input type="text"  class="input"  (input)="onInput($event)"><!--input -->
             </div>
-            <div class="box has-text-centered">
+            <div class="box has-text-centered" *ngIf="enteredText==randomText">
                 <h1 class="title">Success!</h1>
             </div>
         </div>
     </div>
 </div>
-
 
 
 <router-outlet></router-outlet>
