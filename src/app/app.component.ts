@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 //const faker:any =require('faker');
 //import {faker} from '@types/faker';
 import { loremIpsum, LoremIpsum } from "lorem-ipsum";
+
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
     max: 8,
@@ -19,10 +20,10 @@ const lorem = new LoremIpsum({
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-//  title = 'writing_game';
-
-  onInput(value:string){
-    console.log(value);
-  }
   randomText:string=lorem.generateSentences(5);
+  enteredText='';
+  onInput(value:string){
+    //console.log(value);
+    this.enteredText=value;
+  } 
 }
