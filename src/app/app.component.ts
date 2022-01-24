@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {lorem} from 'faker';
+import {lorem } from 'faker';
+
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,6 @@ import {lorem} from 'faker';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'writing_game';
+//  title = 'writing_game';
+  randomText=lorem.sentence();
 }
