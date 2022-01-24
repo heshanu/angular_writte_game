@@ -20,5 +20,9 @@ const lorem = new LoremIpsum({
 })
 export class AppComponent {
 //  title = 'writing_game';
+
+  onInput(value:string){
+    console.log(value);
+  }
   randomText:string=lorem.generateSentences(5);
 }
