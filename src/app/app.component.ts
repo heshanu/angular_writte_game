@@ -18,7 +18,7 @@ const lorem = new LoremIpsum({
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  randomText:string=lorem.generateSentences(5);
+  randomText:string=lorem.generateSentences(3);
   enteredText='';
   onInput(event:any){
     this.enteredText=event.target.value;

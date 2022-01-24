@@ -1,8 +1,8 @@
 <div class="container">
     <div class="columns is-centered">
         <div class="box column is-one-third">
-            <h1 class="title has-text-centered">Typing Chalenge!</h1>  
-            <p class="has-text-centered"><span [class]="compare(letter,enteredText[i])" *ngFor="let letter of randomText.split('');let i=index">{{letter}}{{enteredText[i]}}</span></p>
+            <h1 class="title has-text-centered">Typing Challenge!</h1>  
+            <p class="has-text-centered"><span >{{randomText}}</span></p>
             <div class="field">
           <!--input -->
                 <input type="text"  class="input"  (input)="onInput($event)"><!--input -->
