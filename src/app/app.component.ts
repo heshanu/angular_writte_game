@@ -20,15 +20,16 @@ const lorem = new LoremIpsum({
 export class AppComponent {
   randomText:string=lorem.generateSentences(5);
   enteredText='';
-  /*
-  onInput(event:any){
-   //var p = (<HTMLInputElement>document.getElementById("i")).value;
-    this.enteredText=event.target.value;
-    console.log(this.enteredText);
-  }*/
-
   onInput(event:any){
     this.enteredText=event.target.value;
     //console.log(this.enteredText);
+  }
+  compare(randomLetters:string,enteredLetters:string){
+    if(!enteredLetters){
+      return 'pending';
+    }
+
+    return enteredLetters===randomLetters? 'Correct':'incorrect'; 
+    
   }
 }
